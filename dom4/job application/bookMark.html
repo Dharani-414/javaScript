@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>book mark</h1>
+    <div>
+        <div><a href="./index1.html">Home</div>
+        <div><a href="./application.html">Applied Job</div>
+        <div><a href="./bookMark.html">BookMark</div>
+    </div>
+    <main>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Job applied</th>
+                <th>Salary</th>
+                <th>BookMark</th>  
+            </tr>
+        </thead>
+        <tbody>
+            <!-- data will coming from js -->
+        </tbody>
+    </table>
+</main>
+</body>
+</html>
+<script>
+    let bookMarkArr=JSON.parse(localStorage.getItem("bookMarks"));
+    bookMarkArr.forEach(function(element,index){
+        let tr=document.createElement("tr");
+        let td1=document.createElement("td");
+        td1.innerText=element.personName;
+        let td2=document.createElement("td");
+        td2.innerText=element.personEmail;
+        let td3=document.createElement("td");
+        td3.innerText=element.personRole;
+        let td4=document.createElement("td");
+        td4.innerText=element.personSalary;
+        let td5=document.createElement("td");
+        td5.innerText="Delete";
+        td5.setAttribute("class","deleteText");
+        td5.addEventListener("click",function(){
+           //console.log("delete it");
+           DeleteFun(element,index);
+        });
+        tr.append(td1,td2,td3,td4,td5);
+        document.querySelector("tbody").append(tr);
+    });
+     function DeleteFun(element,index){
+        bookMarkArr.splice(index,1);
+       localStorage.setItem("bookMarks",JSON.stringify(bookMarkArr));
+       //console.log("delete");
+       //window.location.reload();
+      }
+  
+</script>

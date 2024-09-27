@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- navbar -->
+ <div>
+    <div><a href="./index.html">Home</a></div>
+    <div><a href="./application.html">Applied Jobs</a></div>
+    <div><a href="">Bookmark</a></div>
+ </div>
+ <!-- form filling -->
+  <form id="form">
+    <h1>Enter Your Application Details</h1>
+    <input type="text" placeholder="enter ur name" id="name">
+    <input type="email" placeholder="enter ur Email" id="email">
+    <select id="role">
+        <option value="fullStack">fullStack</option>
+        <option value="frontend">frontend</option>
+        <option value="backend">backend</option>
+    </select>
+    <input type="number"placeholder="enter ur expected salary " id="salary"/>
+    <input type="submit" id="submit" value="submit"/>
+  </form>
+</body>
+</html>
+<script>
+      
+  document.querySelector("#form").addEventListener("submit",jobSubmit);
+  let jobArr;
+  if(localStorage.getItem("jobList") !== null){
+     jobArr = JSON.parse(localStorage.getItem("jobList"));
+    //JSON.parse-->is used to convert "json " data to "Object" 
+  } else {
+    jobArr=[];
+  }
+  function jobSubmit(){
+   event.preventDefault();
+    let jobObj = {
+           personName : document.querySelector("#name").value,
+           personEmail : form.email.value,
+           personRole : document.querySelector("#role").value,
+           personSalary : document.querySelector("#salary").value,
+    };
+  
+    //console.log(jobObj);
+  
+    jobArr.push(jobObj);
+    localStorage.setItem("jobList",JSON.stringify(jobArr));//data always show ---> close the tab 
+    //// sessionStorage.setItem("jobList",JSON.stringify(jobArr));data do not store after we want to close the tab
+
+//window.location.href=""-->one page to another page
+    window.location.href="application.html";
+
+  } 
+</script>
