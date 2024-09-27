@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="gender">
+       <option value="Enter ur gender"> select ur gender</option>
+        <option>male</option>
+        <option>Female</option>
+    </select>
+    <button onClick="GenderFunction()">Submit </button>
+    <h4 id="output">show here</h4>
+</body>
+</html>
+<script>
+   function GenderFunction(){
+    let gen=document.getElementById("gender").value;
+    console.log(gen);
+    document.getElementById("output").innerText=gen;
+   }
+</script>

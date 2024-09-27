@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name" placeholder="enter ur name" value=""/>
+    <button onClick="sumbitFunction()">Submit</button>
+    <h5 id="output">show here</h5>
+</body>
+</html>
+<script>
+    function sumbitFunction(){
+      let name1=  document.getElementById("name").value;
+    console.log(name1);
+    document.getElementById("output").innerText=name1;
+    }
+</script>
