@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //create Element-->create tags
+    //1.create tags-->h1,h2,img,p,div...
+    //2.write innerText
+    //3.append-->we will add this created tags into body tag
+    let heading=document.createElement("h1");
+    heading.innerText = "iam heading1";
+    let para = document.createElement("p");
+    para.innerText ="iam paragraph";
+    let body = document.querySelector("body");
+    body.append(heading,para);
+</script>

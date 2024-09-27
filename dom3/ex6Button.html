@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // let btn1=document.createElement("button");
+    // btn1.textContent="primary";
+    // btn1.style.background="lightgreen";
+    //  btn1.style.color="white";
+
+    // let btn2=document.createElement("button");
+    // btn2.textContent="secondry";
+    // btn2.style.background="red";
+    // btn2.style.color="white";
+
+    // let btn3=document.createElement("button");
+    // btn3.textContent="success";
+    // btn3.style.color="white";
+    // btn3.style.background="lightpink";
+    
+    // document.querySelector("body").append(btn1,btn2,btn3);
+
+    let buttonobj = [
+        {textContent:"primary",color:"white",bgcolor:"blue"},
+        {textContent:"secondry",color:"white",bgcolor:"grey"},
+        {textContent:"danger",color:"white",bgcolor:"red"},
+        {textContent:"warning",color:"white",bgcolor:"yellow"}
+    ]
+    buttonobj.map(function(element) {
+        let btn1=document.createElement("button");
+        btn1.textContent=element.textContent;
+        btn1.style.color=element.color;
+        btn1.style.backgroundColor=element.bgcolor;
+        document.querySelector("body").append(btn1);
+    })
+    
+</script>
