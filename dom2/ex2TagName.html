@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>I am heading1</h1>
+    <p>I am paragraph1</p>
+    <p>I am paragraph2</p>
+    <p>I am paragraph3</p>
+    <p>I am paragraph4</p>
+</body>
+</html>
+<script>
+    //tag name--target
+     let head = document.getElementsByTagName("h1");
+     console.log(head);
+    let para = document.getElementsByTagName("p");
+    console.log(para);//output --->to store array formate be like [p,p,p,p]
+    for(let i=0;i<para.length;i++){
+        console.log(para[i]);
+    }
+//applying style on element from js
+head[0].style.color="red";
+head[0].style.fontSize="100px";
+para[2].style.color="grey";
+para[2].style.fontSize="50px";
+</script>

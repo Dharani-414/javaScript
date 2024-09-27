@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head1">heading1</h1>
+    <p class="pTag">paragraph1</p>
+    <p class="pTag">paragraph2</p>
+    <p class="pTag">paragraph3</p>
+    <div class="pTag">this div tag</div>
+</html>
+<script>
+    // let h1=document.getElementById("head1");
+    // console.log(h1);
+   let Collection= document.getElementsByClassName("pTag");
+  // console.log(Collection);//output-->[p.pTag,p.Tag,p.pTag,div.pTag]
+   for (let i=0;i< Collection.length;i++) {
+    console.log(Collection[i]);
+   }
+</script>

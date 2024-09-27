@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 50px;
+            width: 50px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+     <div></div>
+     <p>this is p tag</p>
+</body>
+</html>
+<script>
+//mouseEnter-->event
+let div = document.querySelector("div");
+div.addEventListener("mouseenter",myFunction);
+function myFunction(){
+    document.querySelector("div").style.backgroundColor="red";
+    document.querySelector("div").style.cursor="pointer";
+    console.log(" mouse is enter");
+}
+div.addEventListener("mouseleave",DefaultFunction);
+function DefaultFunction(){
+    document.querySelector("div").style.backgroundColor="teal";
+    console.log("mouse is leave");
+}
+document.querySelector("p").addEventListener("dblclick",function(){
+    console.log(" cliked me twice ");
+}) 
+document.querySelector("p").addEventListener("click",function(){
+    console.log("clicked me once");
+})
+
+</script>

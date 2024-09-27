@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p >this is p1 tag</p>
+    <div id="divTag">i am div tag</div>
+    <h1 class="head1">i am h1 tag</h1>
+    <h2 class="head1">iam h2 tag</h2>
+    <p>p2</p>
+    <p>p3</p>
+    <p>p4</p>
+    <p>p5</p>
+    <p>p6</p>
+</body>
+</html>
+<script>
+    //querySelector -->it will  always returns single element which is first
+    //id selector
+    let idSelector=document.querySelector("#divTag");
+    console.log(idSelector);
+    //class selector
+    let classSelector=document.querySelector(".head1");
+    console.log(classSelector);//it will return only h1 tag 
+    //tag name
+    let tagName=document.querySelector("p");
+    console.log(tagName);//it will return p1 tag 
+</script>

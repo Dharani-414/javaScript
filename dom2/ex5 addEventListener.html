@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <button>like me</button> 
+</body>
+</html>
+<script>
+    //addEvenetListener("eventName","functionName");
+    let btn= document.querySelector("button");
+    // btn.addEventListener("click",function(){
+    //     console.log("this is anonymous function");
+   // alert("someone clicked");
+    // })
+    btn.addEventListener("click",myOnClickFunction);
+    function myOnClickFunction(){
+        console.log("someone clicked me");
+    }
+    
+</script>
