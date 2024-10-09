@@ -1,0 +1,29 @@
+**callback function**-->a function which is passed into another function as an argument is called "call back function",this function invoke (calling)inside theouter function
+EX:
+function Data(callback){
+    setTimeout(function(){
+        console.log("data");
+        callback();
+    },1000);
+}//hof
+function processData(){
+    console.log("processdata");
+}
+Data(processData);//processData is a  callback function for Data function
+
+
+##promise :--->javascript object that keeps track of the eventual completion (or) failure of any asynchronous task
+Two properties-->1.state,result
+**state**
+1.pending--->(waiting)
+2.rejected-->(error)or(failure)
+3.resolved--->(fulfilled==completed)or(success)
+
+SYNTAx:
+new Promise(function(resolve,reject){
+
+})
+
+Handling promises--->2 methods which we chain to the promise object
+                         1.then()--->handling resolved state
+                         2.catch()--->handling rejected state

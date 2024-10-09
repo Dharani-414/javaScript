@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let promise1 = new Promise((resolve,reject)=>{
+        //asynchronous
+        setTimeout(()=>{
+            reject("no data");
+        },5000);
+    });
+    console.log(promise1);
+    //2 handle the promise
+    promise1.then((resolve)=>{
+        console.log(resolve);
+    }) .catch((reject)=>{
+        console.log("reject",reject);
+    })
+    setInterval(function(){
+        console.log(promise1);
+    },6000);
+
+</script>
