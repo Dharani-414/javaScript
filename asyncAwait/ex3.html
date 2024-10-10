@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            display:grid;
+            grid-template-columns: (3,1fr);
+            justify-content: space-around;
+            margin:10% ;
+            
+
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+    async function name() {
+        try{
+           let response = await fetch("https://api.escuelajs.co/api/v1/products");
+           let data = await response.json();
+           console.log(data);//array
+           //dom
+           let Container = document.querySelector("#container");
+           data.map(function(element){
+            let para = document.createElement("p");
+           para.innerText = element.title;
+           let image = document.createElement("img");
+           image.src=element.images;
+           Container.append(para,image);
+           });
+           
+        }
+        catch(error){
+            console.log("error mgs",error);
+        }
+    }
+    name();
+</script>
